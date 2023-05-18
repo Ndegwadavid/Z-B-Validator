@@ -5,7 +5,7 @@ package main
 */
 
 import (
-  "os"
+  //"os"
   "fmt"
   "log"
   "net/http"
@@ -37,19 +37,23 @@ func main(){
   http.HandleFunc("/getapikey",Getapikey)
 
   //ADMIN ROUTES
-  http.HandleFunc("/admin",Dashboard)
+  http.HandleFunc("/",Dashboard)
+  http.HandleFunc("/contactadmin",RequestForapikey)
   http.HandleFunc("/validatekeyrequest",Validatekeyrequest)
   http.HandleFunc("/listkeys",Listapikeys)
-  http.HandleFunc("listservers",Listservers)
+  http.HandleFunc("/listservers",Listservers)
   http.HandleFunc("/login",Login)
   http.HandleFunc("/logout",Logout)
   http.HandleFunc("/createadmin",Createadmin)
   http.HandleFunc("/changepassword",Changepassword)
 
+  //test
+  http.HandleFunc("/blank",Blank)
+
   // start server
-  log.Println(" Starting Odin server at: %s",currentTime)
-  fs := http.FileServer(http.Dir("./static"))
-  http.Handle("/static/",http.StripPrefix("/static",fs))
+  log.Println(" Starting ZB Validator server at: %s",currentTime)
+  fs := http.FileServer(http.Dir("./assets"))
+  http.Handle("/assets/",http.StripPrefix("/assets",fs))
   err = http.ListenAndServe("0.0.0.0:3000",nil)
   if err != nil {
     log.Fatal("[+] Error starting HTTP server: ",err)
@@ -57,8 +61,8 @@ func main(){
 }
 
 
-func init(){
-  emails,err := GetEmailsFromFile("../emaillist.csv")//emaillist.csv
+func Test(){
+  emails,err := GetEmailsFromFile("../emails.txt")//emaillist.csv
   if err != nil{
     log.Fatal(err)
   }
@@ -84,5 +88,5 @@ func init(){
   for _,v := range valid{
     fmt.Println("This is a valid email: ",v)
   }
-  os.Exit(0)
+  //os.Exit(0)
 }

@@ -161,6 +161,6 @@ func Logerror(e error){
   if e != nil{
     log.Println(e)
   } else {
-    log.Println("Can not log a nil errors")
+    log.Println("Can not log a nil error.")
   }
 }

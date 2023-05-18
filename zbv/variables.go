@@ -5,6 +5,7 @@ package main
 */
 import (
   "time"
+  "errors"
   "database/sql"
   "html/template"
 )
@@ -19,7 +20,7 @@ var now = time.Now()
 var currentTime = now.Format("2006-01-02 15:04:05")
 var tpl *template.Template
 //var store = sessions.NewCookieStore([]byte("ZBV"))
-
+var ErrorNonExistantKey = errors.New("Api key doen't exist")
 type DateTime struct{
   Day int
   Month string
@@ -32,4 +33,20 @@ func GetDateTime()(*DateTime){
     Month:now.Month().String(),
     Year:now.Year(),
   }
+}
+
+type User struct{
+  Name string
+  Email string
+  Password string
+  Admin bool
+  CreatedAt string
+  UpdatedAt string
+}
+
+func CreateUser(u User)error{
+  return nil
+}
+func Authenticate(mail,password string) error{
+  return nil
 }

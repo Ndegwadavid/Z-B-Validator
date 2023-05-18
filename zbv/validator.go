@@ -7,6 +7,19 @@ import (
   "errors"
   "regexp"
 )
+
+var EmailValidate = func(email string)(error){
+  err := VerifyEmailSyntax(email)
+  if err != nil{
+    return err
+  }
+  err = CheckEmailDomain(email)
+  if err != nil{
+    return err
+  }
+  return nil
+}
+
 // check if the email's domain exist
 func CheckEmailDomain(email string) error{
   dom := strings.Index(email,"@")

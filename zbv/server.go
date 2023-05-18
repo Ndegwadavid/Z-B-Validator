@@ -18,15 +18,43 @@ func Validatemail(res http.ResponseWriter, req *http.Request){}
 
 func Updateapikey(res http.ResponseWriter, req *http.Request){}
 
+func Getapikey(res http.ResponseWriter, req *http.Request){
+  if req.Method != "POST"{
+    //write an invalid request back
+    tpl.ExecuteTemplate(res,"blank.html",nil)
+    return
+  }
+  //read from body and write to db
+}
 
-func Getapikey(res http.ResponseWriter, req *http.Request){}
+func RequestForapikey(res http.ResponseWriter, req *http.Request){
+  if req.Method != "POST"{
+    tpl.ExecuteTemplate(res,"blank.html",nil)
+    return
+  }
+  //read from body and write to db
+}
 
 
-func Dashboard(res http.ResponseWriter, req *http.Request){}
+func Blank(res http.ResponseWriter, req *http.Request){
+  tpl.ExecuteTemplate(res,"blank.html",nil)
+  return
+}
 
-func Login(res http.ResponseWriter, req *http.Request){}
+func Dashboard(res http.ResponseWriter, req *http.Request){
+  tpl.ExecuteTemplate(res,"index.html",nil)
+  return
+}
 
-func Logout(res http.ResponseWriter, req *http.Request){}
+func Login(res http.ResponseWriter, req *http.Request){
+  tpl.ExecuteTemplate(res,"login.html",nil)
+  return
+}
+
+func Logout(res http.ResponseWriter, req *http.Request){
+  tpl.ExecuteTemplate(res,"login.html",nil)
+  return
+}
 
 func Validatekeyrequest(res http.ResponseWriter, req *http.Request){}
 
