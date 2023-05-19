@@ -17,11 +17,14 @@ import(
   "crypto/sha256"
   "golang.org/x/crypto/bcrypt"
 )
+
+//takes in a password and hashes it into a an encrypted string
 func HashPassword(password string) (string, error) {
     bytes, err := bcrypt.GenerateFromPassword([]byte(password), 12)
     return string(bytes), err
 }
 
+// Takes in a password and a given hash then compares them if they rhyme.
 func CheckPasswordHash(password, hash string) error {
     return bcrypt.CompareHashAndPassword([]byte(hash), []byte(password))
 }
@@ -34,7 +37,7 @@ func HashStruct(data interface{})string{
   return string(sum)
 }
 
-//
+// Opens a file, reads it and returns the lines in a string array
 func GetEmailsFromFile(fileName string)([]string,error){
   var emails []string
   buf,err := ioutil.ReadFile(fileName)

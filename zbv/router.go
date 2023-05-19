@@ -16,7 +16,7 @@ import (
 func main(){
   var err error
   // connect to db
-  _, err = sql.Open("mysql", "root:@tcp(localhost:3306)/zbv")
+  db, err = sql.Open("mysql", "root:@tcp(localhost:3306)/zbv")
   if err != nil {
     fmt.Println("[-] Failed to connect to the email validator's db")
 		log.Fatal(err.Error())

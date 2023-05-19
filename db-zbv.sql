@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS  `servers`(
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `serverid` varchar(255) NOT NULL,
+  `active` BOOLEAN NOT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -20,6 +21,15 @@ CREATE TABLE IF NOT EXISTS  `apikey`(
   `key` varchar(255) NOT NULL,
   `comment` varchar(255) NOT NULL,
   `active` BOOLEAN NOT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS  `users`(
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `admin` BOOLEAN NOT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;

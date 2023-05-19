@@ -55,6 +55,7 @@ func VerifyEmailSyntax(email string) error{
 	return nil
 }
 
+//check if an email trully exist by checking response code from the given MX server
 func ValidateBySend(mxRecords []net.NS,email string)error{
   mailServer := mxRecords[0].Host
   conn,err := net.Dial("tcp",mailServer+":25")
