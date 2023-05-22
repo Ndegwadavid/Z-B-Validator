@@ -95,18 +95,39 @@ func Login(res http.ResponseWriter, req *http.Request){
 
 // logout from admin panel and delete the user session
 func Logout(res http.ResponseWriter, req *http.Request){
-  if req.Method != "POST"{
-    http.Redirect(res,req,"/",http.StatusSeeOther)
+  if req.Method == "POST"{
+    session,_ := store.Get(req,"session")
+    delete(session.Values,"Admin")
+    session.Save(req,res)
+    tpl.ExecuteTemplate(res,"login.html","Successfully logged out.")
     return
   }
-  session,_ := store.Get(req,"session")
-  delete(session.Values,"Admin")
-  session.Save(req,res)
-  tpl.ExecuteTemplate(res,"login.html","Successfully logged out.")
+  http.Redirect(res,req,"/",http.StatusSeeOther)
   return
 }
 
-func Validatekeyrequest(res http.ResponseWriter, req *http.Request){}
+func Validatekeyrequest(res http.ResponseWriter, req *http.Request){
+  /*req.ParseForm()
+  srvId := req.FormValue("serverId")
+  svr,err := GetServer(srvId)
+  if err != nil{
+    fmt.Println("[-] ",err)
+    tpl.ExecuteTemplate(res,"error.html",ErrorInvalidServerId)
+  }
+  key := GenerateApiKey(srv)
+  api := ApiKey{
+    ServerID: srv.ServerID,
+    Key: key,
+    Comment: srv.Name, // can be anything but mostly a description of the server and what it does
+    Active: true,
+    CreatedAt:  currentTime,
+    UpdatedAt: currentTime,
+  }
+  if err := CreateApiKey(api); err != nil{
+    fmt.Println("[-]  ",err)
+  }
+  */
+}
 
 func Listapikeys(res http.ResponseWriter, req *http.Request){}
 

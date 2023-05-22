@@ -7,10 +7,13 @@ import (
 	"os"
 	"time"
 
+	"github.com/common-nighthawk/go-figure"
 	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
+	myFigure := figure.NewFigure("Z--B--Validator", "univers", true)
+	myFigure.Print()
 	go RunServer()
 	time.Sleep(3 * time.Second)
 	var err error
@@ -22,7 +25,7 @@ func main() {
 	fmt.Println("CLI For Z-B-Validator............")
 	var arg string
 	for {
-		fmt.Printf("[+] Enter command:    ")
+		fmt.Printf("[+ ZBV +] Enter command:   ")
 		fmt.Scanln(&arg)
 		switch arg {
 		case "ca", "createaccount", "createadmin":

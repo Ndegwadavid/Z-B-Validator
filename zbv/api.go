@@ -30,6 +30,7 @@ var GenerateApiKey = func(data interface{})string{
   key := HashStruct(data)
   for _, k := range keys{
     if k.Key == key{
+      data = RandString(50)
       goto START
     }
   }
