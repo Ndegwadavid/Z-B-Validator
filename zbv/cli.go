@@ -1,18 +1,18 @@
 package main
 
 import (
-	"time"
 	"database/sql"
 	"fmt"
 	"log"
 	"os"
+	"time"
 
 	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
 	go RunServer()
-	time.Sleep(3*time.Second)
+	time.Sleep(3 * time.Second)
 	var err error
 	db, err = sql.Open("mysql", "root:@tcp(localhost:3306)/zbv")
 	if err != nil {

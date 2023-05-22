@@ -6,3 +6,93 @@ ERROR: Error 1146 (42S02): Table 'sbv.users' doesn't exist]
 ERROR: Error 1146 (42S02): Table 'sbv.users' doesn't exist]
 2023/05/22 05:49:25 [Error scanning rows for authentication.
 ERROR: Error 1054 (42S22): Unknown column 'active' in 'field list']
+2023/05/22 10:26:35 [Error preparing to insert user.
+ERROR dial tcp [::1]:3306: connect: connection refused]
+2023/05/22 10:28:32 [Error querying for servers.
+ERROR: dial tcp [::1]:3306: connect: connection refused]
+2023/05/22 10:28:55 [Error scanning rows for authentication.
+ERROR: dial tcp [::1]:3306: connect: connection refused]
+2023/05/22 10:29:56 [Error preparing to insert user.
+ERROR dial tcp [::1]:3306: connect: connection refused]
+2023/05/22 10:30:41 [Error preparing to insert server.
+ERROR dial tcp [::1]:3306: connect: connection refused]
+2023/05/22 10:32:57 [Error scanning rows for authentication.
+ERROR: dial tcp [::1]:3306: connect: connection refused]
+2023/05/22 10:34:17 [Error querying for servers.
+ERROR: dial tcp [::1]:3306: connect: connection refused]
+2023/05/22 10:38:12 [Error preparing to insert server.
+ERROR Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:38:40 [Error preparing to insert server.
+ERROR Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:39:18 [Error preparing to insert server.
+ERROR Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:40:03 [Error preparing to insert user.
+ERROR Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:41:36 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:41:44 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:41:50 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:41:50 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:41:57 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:42:00 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:42:00 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:42:03 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:42:10 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:42:12 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:42:13 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:42:28 [Error scanning rows for authentication.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:42:32 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:42:32 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:42:38 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:49:11 [Error querying for servers.
+ERROR: Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:50:01 [Error preparing to insert user.
+ERROR Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:53:19 [Error preparing to insert user.
+ERROR Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 10:55:19 [Error preparing to insert user.
+ERROR Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 11:05:21 [Error preparing to insert user.
+ERROR Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 11:05:52 [Error preparing to insert user.
+ERROR Error 1698 (28000): Access denied for user 'root'@'localhost']
+2023/05/22 11:15:55 [Error preparing to insert user.
+ERROR Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)]
+2023/05/22 11:17:32 [Error preparing to insert user.
+ERROR Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)]
+2023/05/22 11:18:35 [Error preparing to insert user.
+ERROR Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)]
+2023/05/22 11:27:11 [Error preparing to insert user.
+ERROR Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)]
+2023/05/22 12:08:14 [Error preparing to insert user.
+ERROR dial tcp: address tcp//3306: unknown port]
+2023/05/22 12:11:29 [Error preparing to insert user.
+ERROR dial tcp: address tcp//3306: unknown port]
+2023/05/22 12:12:00 [Error querying for servers.
+ERROR: dial tcp: address tcp//3306: unknown port]
+2023/05/22 12:16:01 [Error querying for servers.
+ERROR: dial tcp: address tcp//3306: unknown port]
+2023/05/22 12:16:52 [Error querying for servers.
+ERROR: dial tcp: address tcp//3306: unknown port]
+2023/05/22 12:19:01 [Error preparing to insert user.
+ERROR dial tcp: address tcp//3306: unknown port]
+2023/05/22 12:22:34 [Error preparing to insert user.
+ERROR dial tcp: address tcp//3306: unknown port]
+2023/05/22 12:23:24 [Error querying for servers.
+ERROR: dial tcp: address tcp//3306: unknown port]
+2023/05/22 12:23:46 [Error scanning rows for authentication.
+ERROR: dial tcp: address tcp//3306: unknown port]
