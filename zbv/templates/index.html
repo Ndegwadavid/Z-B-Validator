@@ -96,6 +96,7 @@
 </section>
 
   <section class="section main-section">
+    {{with .Banner}}
     <div class="grid gap-6 grid-cols-1 md:grid-cols-3 mb-6">
       <div class="card">
         <div class="card-content">
@@ -105,7 +106,7 @@
                 Servers
               </h3>
               <h1>
-                512
+                {{.Servers}}
               </h1>
             </div>
             <span class="icon widget-icon text-green-500"><i class="mdi mdi-account-multiple mdi-48px"></i></span>
@@ -120,7 +121,7 @@
                 Requests
               </h3>
               <h1>
-                3000
+                {{.Requests}}
               </h1>
             </div>
             <span class="icon widget-icon text-blue-500"><i class="mdi mdi-cart-outline mdi-48px"></i></span>
@@ -136,7 +137,7 @@
                 Performance
               </h3>
               <h1>
-                256%
+                {{.Perfomance}}%
               </h1>
             </div>
             <span class="icon widget-icon text-red-500"><i class="mdi mdi-finance mdi-48px"></i></span>
@@ -144,6 +145,7 @@
         </div>
       </div>
     </div>
+    {{end}}
 
     <div class="card mb-6">
       <header class="card-header">
@@ -188,54 +190,23 @@
           <tr>
             <th></th>
             <th>Name</th>
-            <th>Company</th>
-            <th>City</th>
+            <th>Email</th>
             <th>Progress</th>
             <th>Created</th>
             <th></th>
           </tr>
           </thead>
+          {{with .KeyRequests}}
+          {{range .}}
           <tbody>
           <tr>
-            <td class="image-cell">
-              <div class="image">
-                <img src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg" class="rounded-full">
-              </div>
-            </td>
-            <td data-label="Name">Rebecca Bauch</td>
-            <td data-label="Company">Daugherty-Daniel</td>
-            <td data-label="City">South Cory</td>
+            <td data-label="Name">{{.Name}}</td>
+            <td data-label="Company">{{.Email}}</td>
             <td data-label="Progress" class="progress-cell">
               <progress max="100" value="79">79</progress>
             </td>
             <td data-label="Created">
-              <small class="text-gray-500" title="Oct 25, 2021">Oct 25, 2021</small>
-            </td>
-            <td class="actions-cell">
-              <div class="buttons right nowrap">
-                <button class="button small green --jb-modal"  data-target="sample-modal-2" type="button">
-                  <span class="icon"><i class="mdi mdi-eye"></i></span>
-                </button>
-                <button class="button small red --jb-modal" data-target="sample-modal" type="button">
-                  <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                </button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td class="image-cell">
-              <div class="image">
-                <img src="https://avatars.dicebear.com/v2/initials/felicita-yundt.svg" class="rounded-full">
-              </div>
-            </td>
-            <td data-label="Name">Felicita Yundt</td>
-            <td data-label="Company">Johns-Weissnat</td>
-            <td data-label="City">East Ariel</td>
-            <td data-label="Progress" class="progress-cell">
-              <progress max="100" value="67">67</progress>
-            </td>
-            <td data-label="Created">
-              <small class="text-gray-500" title="Jan 8, 2021">Jan 8, 2021</small>
+              <small class="text-gray-500" title="Oct 25, 2021">{{.CreatedAt}}</small>
             </td>
             <td class="actions-cell">
               <div class="buttons right nowrap">
@@ -249,6 +220,8 @@
             </td>
           </tr>
           </tbody>
+          {{end}}
+          {{end}}
         </table>
       </div>
     </div>

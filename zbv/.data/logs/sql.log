@@ -1,2 +1,8 @@
 2023/05/19 10:24:21 [Error preparing to insert user.
 ERROR Error 1054 (42S22): Unknown column 'admin' in 'field list']
+2023/05/22 05:40:50 [Error scanning rows for authentication.
+ERROR: Error 1146 (42S02): Table 'sbv.users' doesn't exist]
+2023/05/22 05:47:44 [Error scanning rows for authentication.
+ERROR: Error 1146 (42S02): Table 'sbv.users' doesn't exist]
+2023/05/22 05:49:25 [Error scanning rows for authentication.
+ERROR: Error 1054 (42S22): Unknown column 'active' in 'field list']

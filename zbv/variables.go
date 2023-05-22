@@ -77,10 +77,9 @@ func CreateUser(u User)error{
 // Check the supplied username and password if they match else returns an error
 func Authenticate(mail,password string) error{
   var userEmail,hash string
-  var active bool
-  stmt := "SELECT email,password,active FROM `sbv`.`users` WHERE email = ?;"
+  stmt := "SELECT email,password FROM `zbv`.`users` WHERE email = ?;"
   row := db.QueryRow(stmt,mail)
-  err := row.Scan(&userEmail,&hash,&active)
+  err := row.Scan(&userEmail,&hash)
   if err != nil{
     if err == sql.ErrNoRows {
       e := LogErrorToFile("danger",fmt.Sprintf("A none existant user with email %s tried accessing the admin portal",mail))
@@ -90,9 +89,6 @@ func Authenticate(mail,password string) error{
     e := LogErrorToFile("sql",fmt.Sprintf("Error scanning rows for authentication.\nERROR: %s",err))
     Logerror(e)
     return errors.New("Wrong username or password supplied. Try again :).")
-  }
-  if !active{
-    return errors.New("User with this email has been deactivated.")
   }
   err = CheckPasswordHash(password,hash)
   if err != nil{
