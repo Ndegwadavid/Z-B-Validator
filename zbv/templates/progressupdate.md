@@ -13,3 +13,5 @@ javascript event listener for submitting the email
 ## you will try to configure the backend of it so that the event listener will fetch from the backend server
 
 ## also am working on the module2 branch 😄 i dont want to destroy the production especially from backend 😆
+
+## you will merge it after you have checkd and synced chnages from your side too 
