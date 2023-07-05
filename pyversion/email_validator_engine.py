@@ -1,5 +1,4 @@
 """
-Simple Email Validator
 Checks if email adress is valid or not
 """
 

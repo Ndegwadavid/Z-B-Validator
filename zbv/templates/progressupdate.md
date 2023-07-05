@@ -14,4 +14,4 @@ javascript event listener for submitting the email
 
 ## also am working on the module2 branch 😄 i dont want to destroy the production especially from backend 😆
 
-## you will merge it after you have checkd and synced chnages from your side too 
+## you will merge it after you have checked and synced changes from your side too 

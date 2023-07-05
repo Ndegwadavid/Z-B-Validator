@@ -1,5 +1,5 @@
 # Z-B-Validator
-Repository for the zerobounce email validator service. Invention and beyond
+Repository for the email validator service. Invention and beyond
 
 ## ASSUMPTIONS
 This are assumptions made during testing of zbv some might be changed or made configurable for a runtime server.

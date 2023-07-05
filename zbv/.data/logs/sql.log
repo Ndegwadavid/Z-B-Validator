@@ -96,3 +96,13 @@ ERROR dial tcp: address tcp//3306: unknown port]
 ERROR: dial tcp: address tcp//3306: unknown port]
 2023/05/22 12:23:46 [Error scanning rows for authentication.
 ERROR: dial tcp: address tcp//3306: unknown port]
+2023/05/22 15:56:38 [Error querying for servers.
+ERROR: dial tcp: address tcp//3306: unknown port]
+2023/05/22 15:57:18 [Error preparing to insert user.
+ERROR dial tcp: address tcp//3306: unknown port]
+2023/06/08 16:29:44 [Error querying for servers.
+ERROR: dial tcp: address tcp//3306: unknown port]
+2023/06/08 16:30:34 [Error scanning rows for authentication.
+ERROR: dial tcp: address tcp//3306: unknown port]
+2023/06/08 16:32:04 [Error scanning rows for authentication.
+ERROR: dial tcp: address tcp//3306: unknown port]
