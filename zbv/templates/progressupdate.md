@@ -15,3 +15,6 @@ javascript event listener for submitting the email
 ## also am working on the module2 branch 😄 i dont want to destroy the production especially from backend 😆
 
 ## you will merge it after you have checked and synced changes from your side too 
+
+## Started adding content for the web application ..
+## nothing much 😆 just added the start.html for the first time when a user starts visiting the webpage or rather ther web app.
