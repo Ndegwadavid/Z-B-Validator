@@ -38,3 +38,6 @@ To create a working directory for a production server:
 3. Copy templates to dir
 4. Create .data inside dir
 5. Run your server
+
+
+## [demo](https://youtu.be/FRP3WqFoPFg)
